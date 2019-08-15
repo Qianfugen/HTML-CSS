@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>清除浮动</title>
+		<style type="text/css">
+			#all{
+				border: 1px solid black;
+				width:600px;
+				margin: auto;
+			}
+			#div1{
+				border: 5px solid red;
+				width:100px;
+				height: 100px;
+				float: left;
+			}
+			#div2{
+				border: 5px solid red;
+				width:100px;
+				height: 100px;
+				float: left;
+			}
+			/*清除浮动,预防塌陷*/
+			#div3{
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="div1">
+				<img src="../img/28.gif">
+			</div>
+			<div id="div2">
+				<img src="../img/28.gif">
+			</div>
+			<div id="div3">
+			</div>
+		</div>
+	</body>
+</html>

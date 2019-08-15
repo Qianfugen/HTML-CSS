@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>清除浮动</title>
+		<style type="text/css">
+			#all{
+				border: 1px solid black;
+				width:600px;
+				height: 600px;
+				margin: auto;
+			}
+			#div1{
+				border: 5px solid red;
+				width:100px;
+				height: 100px;
+				float: left;
+				margin: 50px;
+			}
+			#div2{
+				border: 5px solid red;
+				width:100px;
+				height: 100px;
+				float: left;
+				margin-top: 50px;
+			}
+			#div3{
+				border: 5px solid red;
+				width:100px;
+				height: 100px;
+				float: left;
+				clear:left;
+				margin-left: 50px;
+			}
+			#div4{
+				border: 5px solid red;
+				width:100px;
+				height: 100px;
+				float: left;
+				margin-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="div1">
+				<img src="../img/28.gif">
+			</div>
+			<div id="div2">
+				<img src="../img/28.gif">
+			</div>
+			<div id="div3">
+				<img src="../img/28.gif">
+			</div>
+			<div id="div4">
+				<img src="../img/28.gif">
+			</div>
+		</div>
+	</body>
+</html>
