@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>秒表</title>
+		<script type="text/javascript">
+			var time;
+			var num=0;
+			//写入秒数
+			function myWrite(){
+				document.getElementById("sec").value=num;
+				num++;
+			}
+			//开始
+			function myStart(){
+				time=setInterval("myWrite()",1000);
+				document.getElementById("start").disabled=true;
+			}
+			//暂停
+			function mySuspend(){
+				clearInterval(time);
+				document.getElementById("start").disabled=false;
+			}
+			//停止
+			function myStop(){
+				clearInterval(time);
+				document.getElementById("start").disabled=false;
+				num=1;
+				document.getElementById("sec").value=0;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="sec" readonly="readonly" value="0">
+		<button id="start" onclick="myStart()">开始</button>
+		<button id="suspend" onclick="mySuspend()">暂停</button>
+		<button id="stop" onclick="myStop()">结束</button>
+	</body>
+</html>

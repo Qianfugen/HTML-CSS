@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<script type="text/javascript">
+			function chgcolor() {
+				document.getElementsByTagName("input")[0].style.backgroundColor = "deepskyblue";
+			}
+
+			function backcolor() {
+				document.getElementsByTagName("input")[0].style.backgroundColor = "white";
+			}
+
+			function chgbig() {
+				document.getElementsByTagName("input")[3].style.fontWeight = "bold";
+			}
+
+			function chgsmall() {
+				document.getElementsByTagName("input")[3].style.fontWeight = "normal";
+			}
+
+			function sub() {
+				//表单验证
+				var name = document.getElementsByTagName("input")[0].value;
+				var pwd = document.getElementsByTagName("input")[1].value;
+				if(name != "" && pwd != "") {
+					return true;
+				} else {
+					alert("用户名或者密码不能为空!");
+					return false;
+				}
+			}
+
+			window.onload = function() {
+				window.document.onkeydown = function(event) {
+					if(event.keyCode == 13) {
+						//表单验证
+						var name = document.getElementsByTagName("input")[0].value;
+						var pwd = document.getElementsByTagName("input")[1].value;
+						if(name != "" && pwd != "") {
+							//在js里面提交表单
+							document.getElementById("f").submit();
+						} else {
+							alert("用户名或者密码不能为空!");
+						}
+					}
+				}
+			}
+		</script>
+		<style type="text/css">
+			#all {
+				width: 600px;
+				height: 400px;
+				background-color: #f2f2f2;
+				margin: auto;
+			}
+			
+			#name {
+				height: 30px;
+				font-size: 26px;
+				margin-bottom: 40px;
+				margin-left: 20px;
+			}
+			
+			#center {
+				width: 500px;
+				height: 210px;
+				font-size: 24px;
+				margin: auto;
+			}
+			
+			input {
+				height: 40px;
+				width: 360px;
+				font-size: 24px;
+			}
+			
+			.code {
+				width: 100px;
+			}
+			
+			a {
+				color: skyblue;
+				font-size: 24px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			span {
+				color: skyblue;
+				font-size: 24px;
+				text-decoration: none;
+				margin: 0px 10px;
+			}
+			
+			#bottom {
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#bottom input {
+				width: 100px;
+				margin-left: 100px;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="all">
+			<form id="f" onsubmit="return sub()" action="https://www.baidu.com" method="post">
+				<div id="name">
+					用户登录
+				</div>
+				<div id="center">
+					用户名:<input type="text" id="userName" onfocus="chgcolor()" onblur="backcolor()" /> </p>
+					&nbsp;&nbsp;&nbsp;密码:<input type="password" /></p>
+					验证码:<input type="text" class="code" />
+					<img src="img/code.png">&nbsp;&nbsp;&nbsp;
+					<a href="####">换一张</a>
+				</div>
+				<div id="bottom">
+					<input type="submit" value="登录" id="but" onmouseover="chgbig()" onmouseout="chgsmall()" style="background-color:#f08300 ;" />
+				</div>
+				<a href="####">注册</a>
+				<span>|</span>
+				<a href="####">忘记密码?</a>
+			</form>
+		</div>
+	</body>
+
+</html>

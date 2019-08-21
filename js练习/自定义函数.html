@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义函数</title>
+		<script type="text/javascript">
+			var i=99;
+			function add(a,b,c){
+				alert("进入方法里...");
+				return a+b;
+			}
+			/*在js里面方法的返回值不需要定义,有返回值在方法里面直接return即可*/
+			var num=add(30,40,50,60);//个数没有限定,可以不匹配
+			alert(num);
+			
+			var sub=function(i,y){
+				return i-y;
+			}
+			alert(sub(10,4));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

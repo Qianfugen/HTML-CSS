@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*第一种写法:自定义事件发生后需要执行的方法*/
+			function load(){
+				/*alert(页面已经加载完成...)*/
+				//获取页面元素
+				var but=document.getElementById("but");
+				alert(but.value);
+			}
+			
+			/*事件的第二种写法*/
+			window.onload=function(){
+				alert("第二种方式实现onload事件");
+			}
+		</script>
+	</head>
+	<body onload="load()">
+		谁是大魔王<br>
+		<button id="but" value="当然是我啦!">这是机关</button>
+	</body>
+</html>

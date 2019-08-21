@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var inp = document.getElementById("userName");
+				inp.onfocus = function() {
+					inp.style.backgroundColor = "deepskyblue";
+				}
+				
+				inp.onblur=function(){
+					inp.style.backgroundColor = "white";
+				}
+				
+				var myBut=document.getElementById("but");
+				myBut.onmouseover=function(){
+					myBut.style.fontWeight="bold";
+				}
+				
+				myBut.onmouseout=function(){
+					myBut.style.fontWeight="normal";
+				}
+			}
+		</script>
+		<style type="text/css">
+			#all {
+				width: 600px;
+				height: 400px;
+				background-color: #f2f2f2;
+				margin: auto;
+			}
+			
+			#name {
+				height: 30px;
+				font-size: 26px;
+				margin-bottom: 40px;
+				margin-left: 20px;
+			}
+			
+			#center {
+				width: 500px;
+				height: 210px;
+				font-size: 24px;
+				margin: auto;
+			}
+			
+			input {
+				height: 40px;
+				width: 360px;
+				font-size: 24px;
+			}
+			
+			.code {
+				width: 100px;
+			}
+			
+			a {
+				color: skyblue;
+				font-size: 24px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			span {
+				color: skyblue;
+				font-size: 24px;
+				text-decoration: none;
+				margin: 0px 10px;
+			}
+			
+			#bottom {
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#bottom input {
+				width: 100px;
+				margin-left: 100px;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="all">
+			<form action="http://www.baidu.com" method="post">
+				<div id="name">
+					用户登录
+				</div>
+				<div id="center">
+					用户名:<input type="text" id="userName" /> </p>
+					&nbsp;&nbsp;&nbsp;密码:<input type="password" /></p>
+					验证码:<input type="text" class="code" />
+					<img src="img/code.png">&nbsp;&nbsp;&nbsp;
+					<a href="####">换一张</a>
+				</div>
+				<div id="bottom">
+					<input type="submit" value="登录" id="but" style="background-color:#f08300 ;" />
+				</div>
+				<a href="####">注册</a>
+				<span>|</span>
+				<a href="####">忘记密码?</a>
+			</form>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window的open方法</title>
+		<script type="text/javascript">
+			var newWindow;
+			function myOp(){
+				newWindow=open("https://www.baidu.com","baidu","height=1080,width=883,toolbar=0,scrollbars=0,location=0,status=0,menubar=0,,resizable=0");
+				setTimeout("myCl()",1000);
+			}
+			function myCl(){
+				self.opener = null;
+				self.open('','_self');
+				self.close();
+			}
+		</script>
+	</head>
+	<body>
+		<button id="op" onclick="myOp()">看pdf文档</button>
+	</body>
+</html>
