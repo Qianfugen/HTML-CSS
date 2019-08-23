@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link type="text/css" rel="stylesheet" href="css/dangdang.css" />
+		<script src="js/dangdang.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -35,8 +36,14 @@
 								<a href="####">团购</a>
 							</li>
 							<li>|</li>
-							<li>
+							<li onmouseover="showInfo()" onmouseout="hiddenInfo()">
 								<a href="####">我的当当</a>
+								<div id="account_info">
+									<a href="####">我的订单</a><br/>
+									<a href="####">账户余额</a><br/>
+									<a href="####">购物礼券</a><br/>
+									<a href="####">我的会员积分</a>
+								</div>
 							</li>
 							<li><img src="img/dd_arrow_down.gif"></li>
 							<li>|</li>
@@ -534,81 +541,255 @@
 				<div id="body_center">
 					<div id="body_center_top">
 						<div id="body_center_top1"><img src="img/dd_scroll_top.gif"></div>
-						<div id="body_center_top2"><img src="img/dd_scroll_3.jpg"></div>
-						<div id="body_center_top3">
-							<div class="num">1</div>
-							<div class="num">2</div>
-							<div class="num">3</div>
-							<div class="num">4</div>
-							<div class="num">5</div>
-							<div class="num">6</div>
-							<div style="clear: both;"></div>
+
+						<div onmouseover="stopImg()" onmouseleave="outImg()">
+							<div id="body_center_top2"><img src="img/dd_scroll_3.jpg"></div>
+							<div id="body_center_top3">
+								<ul id="myUl">
+									<li class="num" onmouseover="changeImg(1)">1</li>
+									<li class="num" onmouseover="changeImg(2)">2</li>
+									<li class="num" onmouseover="changeImg(3)">3</li>
+									<li class="num" onmouseover="changeImg(4)">4</li>
+									<li class="num" onmouseover="changeImg(5)">5</li>
+									<li class="num" onmouseover="changeImg(6)">6</li>
+								</ul>
+							</div>
 						</div>
 						<div id="body_center_top4"><img src="img/dd_scroll_end.gif"></div>
 					</div>
 					<div id="body_center_mid">
 						<div id="body_center_mid_title">
 							<div class="body_center_mid_left">最新上架</div>
-							<div class="body_center_mid_center">
+							<div class="body_center_mid_center" onmouseover="changeBook(1)">
 								<a href="####">历史</a>
 							</div>
-							<div class="body_center_mid_center">
+							<div class="body_center_mid_center" onmouseover="changeBook(2)">
 								<a href="####">家教</a>
 							</div>
-							<div class="body_center_mid_center">
+							<div class="body_center_mid_center" onmouseover="changeBook(3)">
 								<a href="####">文化</a>
 							</div>
-							<div class="body_center_mid_center">
+							<div class="body_center_mid_center" onmouseover="changeBook(4)">
 								<a href="####">小说</a>
 							</div>
 							<div class="body_center_mid_right">
 								<a href="####">更多>></a>
 							</div>
 						</div>
-						<div class="books">
-							<div class="book_face"><img src="img/dd_culture_1.jpg"></div>
-							<div class="introduce">
-								<p class="book_name">嘿,我知道你</p>
-								<p>作者:兰海&nbsp;&nbsp;著</p>
-								<p>出版社:中国妇女出版社</p>
-								<p class="release_time">出版时间:2009年10月</p>
-								<p>定价:$28.8</p>
-								<p>当当价:$17.90</p>
+						<!--
+                        	作者：offline
+                        	时间：2019-08-22
+                        	描述：
+                        -->
+						<div id="book_shelf">
+
+							<div id="bookMenu1" style="display:block;position: absolute;width:540px;">
+								<div class="books">
+									<div class="book_face"><img src="img/dd_history_1.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">《中国时代》（上）</p>
+										<p>作者：师永刚，邹明　主编&nbsp;&nbsp;主编</p>
+										<p>出版社：作家出版社</p>
+										<p class="release_time">出版时间：2009年10月</p>
+										<p>定价：￥39.00</p>
+										<p>当当价：￥27.00</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_history_2.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">中国历史的屈辱</p>
+										<p>作者：出版社：华夏出版社</p>
+										<p class="release_time">出版时间：2009年11月</p>
+										<p>定价：￥26.00</p>
+										<p>当当价：￥18.20</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_history_3.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">《中国时代》（下）</p>
+										<p>作者：师永刚，邹明&nbsp;&nbsp;主编</p>
+										<p>出版社：作家出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价：￥38.00</p>
+										<p>当当价：￥26.30</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_culture_1.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">大家国学十六讲</p>
+										<p>作者：张荫麟，吕思勉&nbsp;&nbsp;著</p>
+										<p>出版社：中国友谊出版公司 </p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价：￥19.80</p>
+										<p>当当价：￥13.70</p>
+									</div>
+									<div style="clear:both;">
+
+									</div>
+								</div>
+							</div>
+							<!--
+                    	作者：offline
+                    	时间：2019-08-22
+                    	描述：
+                    -->
+							<div id="bookMenu2" style="display:none;position:absolute;width:540px;">
+								<div class="books">
+									<div class="book_face"><img src="img/dd_family_1.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">嘿，我知道你</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_family_2.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">择业要趁早</p>
+										<p>作者：（美）列文&nbsp;&nbsp;著</p>
+										<p>出版社：海天出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价：￥28.00</p>
+										<p>当当价：￥19.30</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_family_3.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">爷爷奶奶的“孙子兵法</p>
+										<p>作者：伏建全&nbsp;&nbsp;著</p>
+										<p>出版社：地震出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价：￥28.00</p>
+										<p>当当价：￥17.40</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_family_4.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">1分钟读懂孩子心理</p>
+										<p>作者：海韵&nbsp;&nbsp;著</p>
+										<p>出版社：朝华出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价：￥28.00</p>
+										<p>当当价：￥17.40</p>
+									</div>
+								</div>
+							</div>
+							<!--
+                    	作者：offline
+                    	时间：2019-08-22
+                    	描述：
+                    -->
+							<div id="bookMenu3" style="display:none;position:absolute;width:540px;">
+								<div class="books">
+									<div class="book_face"><img src="img/dd_culture_1.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">嘿，我知道你</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_culture_2.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">卧槽</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_culture_3.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">卧槽</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_culture_4.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">卧槽</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+							</div>
+							<!--
+                    	作者：offline
+                    	时间：2019-08-23
+                    	描述：
+                    -->
+							<div id="bookMenu4" style="display:none;position:absolute;width:540px;">
+								<div class="books">
+									<div class="book_face"><img src="img/dd_novel_1.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">4</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_novel_2.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">卧槽</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_novel_3.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">卧槽</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
+								<div class="books">
+									<div class="book_face"><img src="img/dd_novel_4.jpg"></div>
+									<div class="introduce">
+										<p class="book_name">卧槽</p>
+										<p>作者:兰海&nbsp;&nbsp;著</p>
+										<p>出版社:中国妇女出版社</p>
+										<p class="release_time">出版时间:2009年10月</p>
+										<p>定价:$28.8</p>
+										<p>当当价:$17.90</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="books">
-							<div class="book_face"><img src="img/dd_culture_1.jpg"></div>
-							<div class="introduce">
-								<p class="book_name">嘿,我知道你</p>
-								<p>作者:兰海&nbsp;&nbsp;著</p>
-								<p>出版社:中国妇女出版社</p>
-								<p class="release_time">出版时间:2009年10月</p>
-								<p>定价:$28.8</p>
-								<p>当当价:$17.90</p>
-							</div>
-						</div>
-						<div class="books">
-							<div class="book_face"><img src="img/dd_culture_1.jpg"></div>
-							<div class="introduce">
-								<p class="book_name">嘿,我知道你</p>
-								<p>作者:兰海&nbsp;&nbsp;著</p>
-								<p>出版社:中国妇女出版社</p>
-								<p class="release_time">出版时间:2009年10月</p>
-								<p>定价:$28.8</p>
-								<p>当当价:$17.90</p>
-							</div>
-						</div>
-						<div class="books">
-							<div class="book_face"><img src="img/dd_culture_1.jpg"></div>
-							<div class="introduce">
-								<p class="book_name">嘿,我知道你</p>
-								<p>作者:兰海&nbsp;&nbsp;著</p>
-								<p>出版社:中国妇女出版社</p>
-								<p class="release_time">出版时间:2009年10月</p>
-								<p>定价:$28.8</p>
-								<p>当当价:$17.90</p>
-							</div>
-						</div>
+						<!--
+                    	作者：offline
+                    	时间：2019-08-23
+                    	描述：
+                    -->
 					</div>
 					<div id="body_center_bottom">
 						<div id="body_center_bottom_title">&nbsp;&nbsp;重点关注</div>
@@ -684,7 +865,56 @@
 							<img src="img/dd_book_mess.gif"> 书讯快递
 						</div>
 						<div id="body_right_top2">
-
+							<div id="div_1">
+								<ul id="express">
+									<li>·2010考研英语大纲到货75折...</li>
+									<li>·权威定本四大名著（人民文...</li>
+									<li>·口述历史权威唐德刚先生国...</li>
+									<li>·袁伟民与体坛风云：实话实...</li>
+									<li>·我们台湾这些年：轰动两岸...</li>
+									<li>·畅销教辅推荐：精品套书50...</li>
+									<li>·2010版法律硕士联考大纲75...</li>
+									<li>·计算机新书畅销书75折抢购</li>
+									<li>·2009年孩子最喜欢的书>></li>
+									<li>·弗洛伊德作品精选集59折</li>
+									<li>·2010考研英语大纲到货75折...</li>
+									<li>·权威定本四大名著（人民文...</li>
+									<li>·口述历史权威唐德刚先生国...</li>
+									<li>·袁伟民与体坛风云：实话实...</li>
+									<li>·我们台湾这些年：轰动两岸...</li>
+									<li>·畅销教辅推荐：精品套书50...</li>
+									<li>·2010版法律硕士联考大纲75...</li>
+									<li>·计算机新书畅销书75折抢购</li>
+									<li>·2009年孩子最喜欢的书>></li>
+									<li>·弗洛伊德作品精选集59折</li>
+									<li>·2010考研英语大纲到货75折...</li>
+									<li>·权威定本四大名著（人民文...</li>
+									<li>·口述历史权威唐德刚先生国...</li>
+									<li>·袁伟民与体坛风云：实话实...</li>
+									<li>·我们台湾这些年：轰动两岸...</li>
+									<li>·畅销教辅推荐：精品套书50...</li>
+									<li>·2010版法律硕士联考大纲75...</li>
+									<li>·计算机新书畅销书75折抢购</li>
+									<li>·2009年孩子最喜欢的书>></li>
+									<li>·弗洛伊德作品精选集59折</li>
+									<li>·2010考研英语大纲到货75折...</li>
+									<li>·权威定本四大名著（人民文...</li>
+									<li>·口述历史权威唐德刚先生国...</li>
+									<li>·袁伟民与体坛风云：实话实...</li>
+									<li>·我们台湾这些年：轰动两岸...</li>
+									<li>·畅销教辅推荐：精品套书50...</li>
+									<li>·2010版法律硕士联考大纲75...</li>
+									<li>·计算机新书畅销书75折抢购</li>
+									<li>·2009年孩子最喜欢的书>></li>
+									<li>·弗洛伊德作品精选集59折</li>
+								</ul>
+								<div style="clear: both;">
+									
+								</div>
+							</div>
+							
+							<div id="div_2">
+							</div>
 						</div>
 						<div id="body_right_top3">
 
@@ -736,27 +966,27 @@
 										<img src="img/dd_book_no_01.gif">
 									</div>
 									<div class="center">
-										<img src="img/dd_seven_hearten_01.jpg">
+										<img src="img/dd_seven_hearten_02.jpg">
 									</div>
 									<div class="right">
-										<p style="color: blue">不抱怨的世界</p>
-										<p>作者:(美)鲍温</p>
-										<p>出版社:陕西师范</p>
-										<p>出版时间:2009年4月</p>
+										<p style="color: blue">遇见未知的自己</p>
+										<p>作者:张德芬</p>
+										<p>出版社:华夏出版社</p>
+										<p>出版时间：2008年1月</p>
 									</div>
 								</div>
 								<div class="top">
 									<div class="left">
-										<img src="img/dd_book_no_01.gif">
+										<img src="img/dd_book_no_02.gif">
 									</div>
 									<div class="center">
 										<img src="img/dd_seven_hearten_01.jpg">
 									</div>
 									<div class="right">
-										<p style="color: blue">不抱怨的世界</p>
-										<p>作者:(美)鲍温</p>
-										<p>出版社:陕西师范</p>
-										<p>出版时间:2009年4月</p>
+										<p style="color: blue">活法</p>
+										<p>作者：（日）稻盛</p>
+										<p>出版社：东方出版</p>
+										<p>出版时间：2005年3月</p>
 									</div>
 								</div>
 							</div>
@@ -783,44 +1013,42 @@
 
 					</div>
 				</div>
-			</div>
 
-			<div id="footer">
-				<div id="footer_top">
-					<ul>
-						<li>
-							<a href="#### ">公司简介</a>
-						</li>
-						<li>|</li>
-						<li>
-							<a href="#### ">诚证英才</a>
-						</li>
-						<li>|</li>
-						<li>
-							<a href="#### ">网络联盟</a>
-						</li>
-						<li>|</li>
-						<li>
-							<a href="#### ">百货招商</a>
-						</li>
-						<li>|</li>
-						<li>
-							<a href="#### ">交易条款</a>
-						</li>
-					</ul>
+				<div id="footer">
+					<div id="footer_top">
+						<ul>
+							<li>
+								<a href="#### ">公司简介</a>
+							</li>
+							<li>|</li>
+							<li>
+								<a href="#### ">诚证英才</a>
+							</li>
+							<li>|</li>
+							<li>
+								<a href="#### ">网络联盟</a>
+							</li>
+							<li>|</li>
+							<li>
+								<a href="#### ">百货招商</a>
+							</li>
+							<li>|</li>
+							<li>
+								<a href="#### ">交易条款</a>
+							</li>
+						</ul>
+					</div>
+					<div id="footer_bottom">
+						<div id="footer_bottom_left">
+							Copyright&copy;当当网2004-2009,All Right Reserved
+						</div>
+						<div id="footer_bottom_center">
+						</div>
+						<div id="footer_bottom_right">
+							京ICP证041189号&nbsp;音像制品经营许可证&nbsp;京音网8号
+						</div>
+					</div>
 				</div>
-				<div id="footer_bottom">
-					<div id="footer_bottom_left">
-						Copyright&copy;当当网2004-2009,All Right Reserved
-					</div>
-					<div id="footer_bottom_center">
-					</div>
-					<div id="footer_bottom_right">
-						京ICP证041189号&nbsp;音像制品经营许可证&nbsp;京音网8号
-					</div>
-				</div>
-			</div>
-		</div>
 	</body>
 
 </html>

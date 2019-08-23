@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>删除和替换节点</title>
+		<script type="text/javascript">
+			function addNode() {
+				var myUl=document.getElementById("myul");
+				var myLi=myUl.getElementsByTagName("li")[0].cloneNode(true);
+				myUl.appendChild(myLi);
+			}
+
+			function delNode() {
+				//刪除节点
+				var myLi = document.getElementsByTagName("li")[0];
+				myLi.parentNode.removeChild(myLi);
+			}
+		</script>
+	</head>
+
+	<body>
+		<button onclick="addNode()">新增</button>
+		<button onclick="delNode()">删除</button>
+		<ul id="myul">
+			<li><input type="text" placeholder='请输入内容'/></li>
+		</ul>
+	</body>
+
+</html>

@@ -93,6 +93,15 @@ hr {
 	margin-top: 5px;
 }
 
+/*头部第一行下拉菜单*/
+#account_info{
+	border:1px solid gray;
+	padding: 2px 3px;
+	position: absolute;
+	display: none;
+	background-color:white ;
+}
+
 
 /*头部第二行*/
 
@@ -453,12 +462,21 @@ hr {
 
 /*数字按钮*/
 
-.num {
+#body_center_top3 .num {
 	border: 1px solid black;
 	width: 18px;
 	height: 18px;
 	text-align: center;
 	margin: 3px 0px;
+}
+/*数字按钮的背景色改变*/
+.chgcolor{
+	border: 1px solid black;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	margin: 3px 0px;
+	background-color:orange;
 }
 
 
@@ -470,11 +488,17 @@ hr {
 	margin: 10px 0px;
 }
 
+
 #body_center_mid_title {
 	height: 25px;
 	background-color: #f2f2f3;
 }
 
+#book_shift{
+	height:280px ;
+	width:540px;
+	clear: both;
+}
 
 /*主体中间中部表头*/
 
@@ -541,7 +565,7 @@ hr {
 /*主体中间中部书籍字体大小*/
 
 .introduce p {
-	font-size: 14px;
+	font-size: 12px;
 }
 
 
@@ -549,7 +573,6 @@ hr {
 
 #body_center_mid .book_name {
 	color: blue;
-	font-size: 18px;
 	font-weight: bold;
 }
 
@@ -566,6 +589,8 @@ hr {
 #body_center_bottom {
 	/*background-color: green;*/
 	height: 420px;
+	width: 540px;
+	clear: both;
 }
 
 
@@ -587,21 +612,26 @@ hr {
 
 #body_center_bottom .book_face {
 	height: 90px;
+	margin-top: 10px;
 }
 
 #body_center_bottom .book_face img {
-	margin-left: 22px;
+	margin: 0px 22px;
 }
 
 #body_center_bottom .book_name {
 	height: 30px;
 	font-size: 14px;
 	text-align: center;
+	float: left;
+	margin-top: 10px;
 }
 
 #body_center_bottom .book_price {
 	height: 60px;
+	width: 120px;
 	text-align: center;
+	float: left;
 }
 
 #body_center_bottom .book_price p {
@@ -637,9 +667,15 @@ hr {
 	vertical-align: middle;
 }
 
+/*书讯快递*/
 #body_right_top2 {
 	height: 280px;
-	background-color: red;
+	background-color: darkgrey;
+	overflow: hidden;
+}
+
+#body_right_top2 li{
+	margin-top:5px ;
 }
 
 #body_right_top3 {
@@ -712,7 +748,7 @@ hr {
 
 #body_right_bottom_content_center .right {
 	float: left;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 #body_right_bottom_content_bottom {

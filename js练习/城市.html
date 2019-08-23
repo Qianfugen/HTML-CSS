@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Arrays数组</title>
+		<script type="text/javascript">
+			//创建城市数组
+			var pro = Array();
+			pro[0] = ["深圳", "广州", "东莞", "汕头"];
+			pro[1] = ["长沙", "湘潭", "衡阳", "株洲"];
+			pro[2] = ["石家庄", "邯郸", "唐山", "沧州"];
+
+			function myChange(obj) {
+				var num = 0;
+				var index = obj.value;
+				var citys = pro[index];
+
+				cityNode = document.getElementById("citys");
+
+				cityoptions = cityNode.getElementsByTagName("option");
+
+				while(cityoptions.length > 1) {
+					cityNode.removeChild(cityoptions[1]);
+				}
+
+				for(c in citys) {
+					var cOption = cityNode.getElementsByTagName("option")[0].cloneNode(false);
+					cOption.innerHTML = citys[c];
+					cOption.value = num;
+					cityNode.appendChild(cOption);
+					num++;
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		省份:
+		<select id="provinces" onchange="myChange(this)">
+			<option value="-1">--请选择--</option>
+			<option value="0">广东</option>
+			<option value="1">湖南</option>
+			<option value="2">河北</option>
+		</select>
+
+		城市:
+		<select id="citys">
+			<option value="-1">--请选择--</option>
+		</select>
+	</body>
+
+</html>
